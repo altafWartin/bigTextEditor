@@ -14,7 +14,7 @@ const theme = createTheme({
       contrastText: "white",
     },
     background: {
-      default: "#f8f8f8",
+      // default: "#f8f8f8",
     },
     colors: {
       darkblue: "#364570ff",

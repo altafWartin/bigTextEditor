@@ -32,7 +32,7 @@ function LexicalEditorWrapper(props) {
       >
         <RichTextPlugin // #312D4B
           contentEditable={<MuiContentEditable />}
-          placeholder={<Box sx={placeHolderSx}>Enter some text...</Box>}
+          // placeholder={<Box sx={placeHolderSx}>Enter some text...</Box>}
           ErrorBoundary={LexicalErrorBoundary}
         />
         <OnChangePlugin onChange={onChange} />

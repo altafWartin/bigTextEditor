@@ -15,13 +15,14 @@ function App() {
       <CssBaseline />
       <Grid
         container
-        sx={{ minHeight: "100vh" }}
+        className="border w-fit-content"
+        sx={{ minHeight: "10vh", width: "752px", margin: "20px" }}
         flexDirection="column"
         alignItems="center"
       >
-        <Grid item sx={{ my: 4 }}>
+        {/* <Grid item sx={{ my: 4 }}>
           <Typography variant="h4">Lexical Editor</Typography>
-        </Grid>
+        </Grid> */}
         <Grid item sx={{ width: 750, overflow: "hidden" }}>
           <LexicalEditorWrapper />
         </Grid>

@@ -130,7 +130,8 @@ const pluginsList = [
     id: 13,
     Icon: ImageIcon,
     event: eventTypes.insertImage,
-  },  {
+  },
+  {
     id: 18,
     Icon: VideoIcon,
     event: eventTypes.insertVideo,
@@ -180,8 +181,6 @@ const LexicalEditorTopBar = () => {
   const { onClick, selectedEventTypes, blockType, isLink, editor, modal } =
     useOnClickListener();
 
-
-
   const isIconSelected = (plugin) =>
     selectedEventTypes.includes(plugin.event) ||
     blockType.includes(plugin.event);
@@ -191,7 +190,6 @@ const LexicalEditorTopBar = () => {
   const handleChange = (event) => {
     const selectedValue = event.target.value;
     setSelectedOption(selectedValue);
-
 
     // Example: If 'h1' is selected, trigger onClick with eventTypes.h1
     if (selectedValue === "h1") {
@@ -373,16 +371,12 @@ const LexicalEditorTopBar = () => {
             <span className="px-3 height-20 .fs-1 bold">|</span>
 
             <Grid item sx={{ cursor: "pointer", marginRight: "2px" }}>
-              <ImageIcon
-                onClick={() => onClick(eventTypes.insertImage)}
-               
-              />
+              <ImageIcon onClick={() => onClick(eventTypes.insertImage)} />
             </Grid>
 
             <Grid item sx={{ cursor: "pointer" }}>
               <VideoIcon
                 onClick={() => onClick(eventTypes.insertVideo)} // Replace with your actual event type
-             
               />
             </Grid>
             <span className="px-3 height-20 ">|</span>
@@ -393,9 +387,10 @@ const LexicalEditorTopBar = () => {
                 value={selectedOption}
                 onChange={handleChange}
                 displayEmpty
-                inputProps={{ "aria-label": "Without label" }}
+                id="select"
               >
                 <MenuItem value={eventTypes.paragraph}>
+                  {" "}
                   <Grid item key={2} sx={{ cursor: "pointer" }}>
                     <button
                       className="bg-white border-0"
@@ -421,7 +416,6 @@ const LexicalEditorTopBar = () => {
                     </button>
                   </Grid>
                 </MenuItem>
-
                 <MenuItem value={eventTypes.h2}>
                   <Grid item key={3} sx={{ cursor: "pointer" }}>
                     <button
