@@ -1,0 +1,11 @@
+.selected {
+  color: #1E40AF;
+  background-color: #EFF6FF;
+  border-radius: 5px;
+  /* Add any other styles for the selected state */
+}
+/* .inputContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
