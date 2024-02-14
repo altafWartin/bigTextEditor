@@ -380,15 +380,19 @@ const LexicalEditorTopBar = () => {
               />
             </Grid>
             <span className="px-3 height-20 ">|</span>
-            <FormControl sx={{ m: 0, minWidth: 130, border: 0, height: 40 }}>
+            <FormControl sx={{ m: 0, minWidth: 130, height: 40 }}>
               <Select
-                className="border-0 bg-white"
+                className=" bg-white"
                 sx={{ border: 0, height: 40 }}
                 value={selectedOption}
                 onChange={handleChange}
                 displayEmpty
                 id="select"
               >
+                {" "}
+                <MenuItem value="">
+                  <em>Paragraph</em>
+                </MenuItem>
                 <MenuItem value={eventTypes.paragraph}>
                   {" "}
                   <Grid item key={2} sx={{ cursor: "pointer" }}>
