@@ -22,6 +22,7 @@ function LexicalEditorWrapper(props) {
   return (
     <LexicalComposer initialConfig={lexicalEditorConfig}>
       <LexicalEditorTopBar />
+
       <Divider />
       <Box
         sx={{
@@ -34,7 +35,7 @@ function LexicalEditorWrapper(props) {
           contentEditable={<MuiContentEditable />}
           // placeholder={<Box sx={placeHolderSx}>Enter some text...</Box>}
           ErrorBoundary={LexicalErrorBoundary}
-        />
+        />{" "}
         <OnChangePlugin onChange={onChange} />
         <HistoryPlugin />
         <TreeViewPlugin />
